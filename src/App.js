@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React - ana
+          Learn React - Flor
         </a>
       </header>
     </div>
