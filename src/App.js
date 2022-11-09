@@ -1,19 +1,22 @@
+import {collection,getDocs, query, doc, deleteDoc, where, } from "firebase/firestore";
+//import {g}
+import React, { useEffect,useState } from 'react';
+import firebase, {db} from './componente/firebase';
+import  Appform from './componente/Appform';
 import logo from './logo.svg';
 import './App.css';
-import Appform from "./componente/Appform";
-import { useEffect, useState } from 'react';
 
 
 function App() {
   ///////////////////READ/////////////////
   ////
   ///
-  const [idActual,setIdActual] = useState('');
+  const [idActual,setIdActual] = useState("");
   const [docsBD, setDocsBD] = useState([]);
   const [orden, setOrden] = useState(0);
   const i=1;
 ///////////////LECTURA A BASE DE DATOS///////////
-  const fnRead = () => {
+  const fnRead = async() => {
     console.log("Lectura a BD")
   }
   useEffect(() =>{
