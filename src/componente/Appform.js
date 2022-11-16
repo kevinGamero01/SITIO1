@@ -1,8 +1,8 @@
-import { async } from "@firebase/util";
+//import { async } from "@firebase/util";
 import {collection,getDocs, query, doc, deleteDoc, where, addDoc, } from "firebase/firestore";
 ///
 import React, { useEffect, useState } from 'react';
-import firebase, {db} from './componente/firebase';
+//simport firebase, {db} from './componente/firebase';
 
 const Appform = (props) => {
     /////
@@ -22,7 +22,7 @@ const Appform = (props) => {
       if(props.idActual===""){
         //
         if(validarForm()){
-          addDoc(collection(db, 'persona'), objeto);
+          //addDoc(collection(db, 'persona'), objeto);
           console.log('Se guardó...');
           props.fnRead();
         }else{
