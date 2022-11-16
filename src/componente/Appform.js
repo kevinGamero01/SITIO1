@@ -3,7 +3,7 @@ import {collection,getDocs, query, doc, deleteDoc, where, addDoc, } from "fireba
 ///
 import React, { useEffect, useState } from 'react';
 import firebase, {db} from './firebase';
-import Appform from './componente/Appform';
+//import Appform from './componente/Appform';
 
 const Appform = (props) => {
     /////
