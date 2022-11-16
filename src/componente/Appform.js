@@ -63,7 +63,7 @@ const Appform = (props) => {
       onChange={handleStatusChange} value={objeto.nombre} /> <br/>
       <input type="text" name="edad" placeholder="Edad..."
       onChange={handleStatusChange} value={objeto.edad} /> <br/>
-      <input type="text" name="genero" placeholder="Genero..."
+      <input type="text" name="genero2" placeholder="Genero..."
       onChange={handleStatusChange} value={objeto.genero} /> <br/>
       <button>
         {props.idActual=== ""? "Guardar" : "Actualizar"}
