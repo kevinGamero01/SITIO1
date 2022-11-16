@@ -14,4 +14,4 @@ var firebaseConfig = {
 const fb = firebase.initializeApp(firebaseConfig);
 //export const db = getFirestore();
 //export default app;
-export const bd=fb.firestore();
+export const db=fb.firestore();
