@@ -30,8 +30,7 @@ function App() {
     <div style={{background:"greenyellow",width:"350px"}}>
       <h1>sitiocopia2 (App.js)</h1>
     <Appform {...{idActual, setIdActual, fnRead}}/>{
-      docsBD.map(   (p) => j
-      )
+      docsBD.map(   (p) => App.js)
     }
     </div>
   );

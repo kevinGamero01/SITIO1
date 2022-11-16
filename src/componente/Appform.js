@@ -2,7 +2,7 @@
 import {collection,getDocs, query, doc, deleteDoc, where, addDoc, } from "firebase/firestore";
 ///
 import React, { useEffect, useState } from 'react';
-//simport firebase, {db} from './componente/firebase';
+import firebase, {db} from './firebase';
 
 const Appform = (props) => {
     /////
@@ -10,6 +10,7 @@ const Appform = (props) => {
     ////
     const camposRegistro = {nombre:"", edad:"", genero:""};
     const [objeto, setObjeto]=useState(camposRegistro);
+
     const handleStatusChange = (e) => {
       const {name,value}=e.target;
       setObjeto({...objeto, [name]:value});
@@ -22,7 +23,7 @@ const Appform = (props) => {
       if(props.idActual===""){
         //
         if(validarForm()){
-          //addDoc(collection(db, 'persona'), objeto);
+          addDoc(collection(db, 'persona'), objeto);
           console.log('Se guardó...');
           props.fnRead();
         }else{
@@ -34,7 +35,7 @@ const Appform = (props) => {
       setObjeto(camposRegistro);
     }
     const validarForm = () => {
-      if(objeto.nombre==="" || /^\s+S/.test(objeto.nombre)){
+      if(objeto.nombre==="" || /^\s+$/.test(objeto.nombre)){
         alert("Escriba nombres...");
         return false;
       }
@@ -42,10 +43,9 @@ const Appform = (props) => {
     };
 
     useEffect(() => {
-
     },[props.idActual]);
-    const obtenerDatosPorId = async(xId)=>{
 
+    const obtenerDatosPorId = async(xId)=>{
     }
     if(props.idActual === ""){
       console.log("Guarda en BD");
@@ -55,9 +55,10 @@ const Appform = (props) => {
     
     
   return (
-    <div style={{background:"orange"}}>
+    <div style={{background:"orange",padding:"10px", textAlign:"center"}}>
     <h1>Appform.js</h1>
     <form onSubmit={handleSubmit}>
+
       <input type="text" name="nombre" placeholder="Nombres..."
       onChange={handleStatusChange} value={objeto.nombre} /> <br/>
       <input type="text" name="edad" placeholder="Edad..."
@@ -65,7 +66,7 @@ const Appform = (props) => {
       <input type="text" name="genero" placeholder="Genero..."
       onChange={handleStatusChange} value={objeto.genero} /> <br/>
       <button>
-        {props.idActual=== "" ? "Guardar" : "Actualizar"}
+        {props.idActual=== ""? "Guardar" : "Actualizar"}
       </button>
     </form>
     </div>
