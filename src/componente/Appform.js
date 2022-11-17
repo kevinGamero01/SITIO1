@@ -2,7 +2,7 @@
 import {collection,getDocs, query, doc, deleteDoc, where, addDoc, } from "firebase/firestore";
 ///
 import React, { useEffect, useState } from 'react';
-import firebase, {db} from './firebase';
+import {db} from './firebase2';
 //import Appform from './componente/Appform';
 
 const Appform = (props) => {

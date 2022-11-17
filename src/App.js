@@ -1,7 +1,7 @@
 import {collection,getDocs, query, doc, deleteDoc, where, } from "firebase/firestore";
 import './App.css';
 import React, { useEffect,useState } from 'react';
-import firebase, {db} from './componente/firebase';
+import  {db} from './componente/firebase2';
 import  Appform from './componente/Appform';
 import logo from './logo.svg';
 import './App.css';
