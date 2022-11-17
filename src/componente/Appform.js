@@ -24,7 +24,7 @@ const Appform = (props) => {
       if(props.idActual===""){
         //
         if(validarForm()){
-          addDoc(collection(db, 'persona'), objeto);
+          addDoc(collection(db, 'favoritos'), objeto);
           console.log('Se guardó...');
           props.fnRead();
         }else{
