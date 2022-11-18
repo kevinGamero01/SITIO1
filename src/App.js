@@ -1,8 +1,8 @@
-import {collection,getDocs, query, doc, deleteDoc, where, onSnapshot, } from "firebase/fireeffstore";
+import {collection,getDocs, query, doc, deleteDoc, where, onSnapshot, } from "firebase/firestore";
 import './App.css';
 import React, { useEffect,useState } from 'react';
-import  {db} from './componente/firebase2';
-import  Appform from './componente/Appform';
+import  {db} from './componente/firebase';
+import  Appform from './componente/AppForm';
 //import { async } from "@firebase/util";
 ///////////////////READ/////////////////
 function App() {
