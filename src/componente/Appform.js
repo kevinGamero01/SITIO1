@@ -66,7 +66,8 @@ const AppForm = (props) => {
     ///////////////////////////////////////////////////////////////////////
 
     return (
-        <div style={{background:"orange", padding:"10px", margin:"10px"}}>
+        <div //style={{background:"orange", padding:"10px", margin:"10px"}}
+        >
             <h3>CREAR / UPDATE</h3>
             <form onSubmit={handleSubmit}>
                 <input type="text" name='nombre' placeholder='Nombres...' 
