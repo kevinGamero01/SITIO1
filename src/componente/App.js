@@ -44,7 +44,7 @@ function App() {
   };
 
   return (
-    <div style={{width:"350px", background:"greenyellow", padding:"10px"}}>
+    <div style={{width:"360px", background:"greenyellow", padding:"10px"}}>
       <h1>sitiocopia2a3 (App.js)</h1>
       <h3>READ / DELETE</h3>
       <AppForm {...{idActual, setIdActual,fnRead}} />

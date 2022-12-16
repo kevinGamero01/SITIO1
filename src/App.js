@@ -5,7 +5,7 @@ import  {db} from './componente/firebase';
 import  AppForm from './componente/AppForm';
 import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
-import 'bootswatch/dist/quartz/bootstrap.min.css';
+//import 'bootswatch/dist/quartz/bootstrap.min.css';
 //import { async } from "@firebase/util";
 ///////////////////READ/////////////////
 function App() {
